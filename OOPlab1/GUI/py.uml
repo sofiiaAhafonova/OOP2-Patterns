@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#/home/amita/PycharmProjects/OOP2:Patterns/OOPlab1/GUI/gui.py</OriginalElement>
+  <nodes>
+    <node x="479.9999999999999" y="1336.0">GUI.gui.UserInterface</node>
+    <node x="446.7499999999999" y="0.0">_collections_abc.Hashable</node>
+    <node x="339.99999999999994" y="1685.0">GUI.gui.LowAccessInfo</node>
+    <node x="366.2499999999999" y="239.0">object</node>
+    <node x="196.99999999999994" y="1270.0">GUI.gui.GUI</node>
+    <node x="0.0" y="1685.0">GUI.gui.HighAccessInfo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="GUI.gui.GUI" target="object">
+      <point x="0.0" y="-182.5" />
+      <point x="328.49999999999994" y="1245.0" />
+      <point x="495.7499999999999" y="1245.0" />
+      <point x="-129.5" y="490.5" />
+    </edge>
+    <edge source="object" target="_collections_abc.Hashable">
+      <point x="0.0" y="-490.5" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="GUI.gui.HighAccessInfo" target="GUI.gui.GUI">
+      <point x="0.0" y="-72.0" />
+      <point x="160.0" y="1660.0" />
+      <point x="262.74999999999994" y="1660.0" />
+      <point x="-65.75" y="182.5" />
+    </edge>
+    <edge source="GUI.gui.UserInterface" target="object">
+      <point x="0.0" y="-116.5" />
+      <point x="921.9999999999999" y="1245.0" />
+      <point x="754.7499999999999" y="1245.0" />
+      <point x="129.5" y="490.5" />
+    </edge>
+    <edge source="GUI.gui.LowAccessInfo" target="GUI.gui.GUI">
+      <point x="0.0" y="-72.0" />
+      <point x="496.99999999999994" y="1660.0" />
+      <point x="394.24999999999994" y="1660.0" />
+      <point x="65.75" y="182.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="373.5" y="1529.0" />
+  <SelectedNodes>
+    <node>object</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+</Diagram>
+

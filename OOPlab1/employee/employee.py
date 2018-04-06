@@ -4,12 +4,10 @@ from abc import ABCMeta, abstractmethod
 class OfficeWorker:
     __metaclass__ = ABCMeta
 
-    workplace = 0
-    salary = 0
-    name = "John"
-    surname = "Doe"
-    is_working = True
-    presence = True
+    def __init__(self, name="John", surname="Doe", salary=100, workplace=1):
+        super().__init__()
+        self.name, self.surname, self.salary, self.workplace, self.is_working = name, surname, salary, workplace, True
+        self.presence = True
 
     def get_salary(self, salary):
         if self.is_working:
@@ -20,9 +18,7 @@ class OfficeWorker:
 
     def quit(self):
         if self.is_working:
-            self.workplace = 0
-            self.presence = False
-            self.is_working = False
+            self.workplace,  self.presence, self.is_working= 0, False, False
             print("You've quited your job")
         else:
             print("You don't have a job")
@@ -43,8 +39,7 @@ class OfficeWorker:
 
     def get_job(self, workplace):
         if not self.is_working:
-            self.workplace = workplace
-            self.is_working = True
+            self.workplace, self.is_working = workplace, True
             print("You're an office worker now")
         else:
             print("You've already have a job")
@@ -59,11 +54,7 @@ class Director(OfficeWorker):
     employees = 1
 
     def __init__(self, name="John", surname="Doe", salary=100, workplace=1):
-        self.name = name
-        self.surname = surname
-        self.salary = salary
-        self.workplace = workplace
-        self.is_working = True
+        super().__init__(name, surname, salary, workplace)
 
     def introduction(self):
         print("I'm a director of the company."
@@ -75,11 +66,7 @@ class SysAdmin(OfficeWorker):
     administratingPCs = 3
 
     def __init__(self, name="John", surname="Doe", salary=100, workplace=1):
-        self.name = name
-        self.surname = surname
-        self.salary = salary
-        self.workplace = workplace
-        self.is_working = True
+        super().__init__(name, surname, salary, workplace)
 
     def introduction(self):
         print("I'm a system administrator of the company."
@@ -91,11 +78,7 @@ class OfficeManager(OfficeWorker):
     offices = 1
 
     def __init__(self, name="John", surname="Doe", salary=100, workplace=1):
-        self.name = name
-        self.surname = surname
-        self.salary = salary
-        self.workplace = workplace
-        self.is_working = True
+        super().__init__(name, surname, salary, workplace)
 
     def introduction(self):
         print("I'm an office manager of the company."
@@ -105,6 +88,7 @@ class OfficeManager(OfficeWorker):
 class Decorator(OfficeWorker):
     """Decorator"""
     def __init__(self, obj):
+        super().__init__()
         self.obj = obj
 
     def introduction(self):
